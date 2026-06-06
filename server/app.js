@@ -14,16 +14,19 @@ connectDb()
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+      "http://podcaster-04.vercel.app",
+      "https://podcaster-04.vercel.app",
+    ],
   credentials: true
 }));
 app.use("/uploads",express.static("uploads"))
 
 
 //all routes
-app.use("/api/v1",userApi)
-app.use("/api/v1",categoryApi)
-app.use("/api/v1",podcastApi)
+app.use("/api/v1/user",userApi)
+app.use("/api/v1/category",categoryApi)
+app.use("/api/v1/podcast",podcastApi)
 
 
 app.get("/",(req,res)=>{
