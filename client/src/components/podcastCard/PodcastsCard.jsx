@@ -11,10 +11,10 @@ const PodcastsCard = ({ items }) => {
       e.preventDefault();
       dispatch(playerActions.setDiv());
       dispatch(
-        playerActions.changeImage(`http://localhost:3000/${items.frontImage}`)
+        playerActions.changeImage(`https://pod-caster-api-04.vercel.app/${items.frontImage}`)
       );
       dispatch(
-        playerActions.changeSong(`http://localhost:3000/${items.audioFile}`)
+        playerActions.changeSong(`https://pod-caster-api-04.vercel.app/${items.audioFile}`)
       );
     }
   };
