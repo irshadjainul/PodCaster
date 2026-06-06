@@ -11,7 +11,7 @@ const Header = () => {
   
   useEffect(() => {
     const fetchUserDetails = async () => {
-      const res = await axios.get("http://localhost:3000/api/v1/userDetails", {
+      const res = await axios.get("https://pod-caster-api-04.vercel.app/api/v1/user/userDetails", {
         withCredentials: true,
       });
       setUserData(res.data.user);
@@ -19,7 +19,7 @@ const Header = () => {
     fetchUserDetails();
   }, []);
   const logoutHandler = async () => {
-    const res = await axios.post("http://localhost:3000/api/v1/logout", {
+    const res = await axios.post("https://pod-caster-api-04.vercel.app/api/v1/user/logout", {
       withCredentials: true,
     });
     console.log(res)
