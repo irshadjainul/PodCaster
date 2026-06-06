@@ -10,7 +10,7 @@ const CategoriesPage = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/getPodcastByCategory/${cat}`,
+        `https://pod-caster-api-04.vercel.app/api/v1/podcast/getPodcastByCategory/${cat}`,
         { withCredentials: true }
       );
       setPodcasts(res.data.data);
