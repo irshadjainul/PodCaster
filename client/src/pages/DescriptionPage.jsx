@@ -9,7 +9,7 @@ const DescriptionPage = () => {
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/getPodcastById/${id}`
+        `https://pod-caster-api-04.vercel.app/api/v1/podcast/getPodcastById/${id}`
       );
       setPodcasts(res.data.data);
     };
