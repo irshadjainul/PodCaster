@@ -269,7 +269,7 @@ const InputPodcast = () => {
     data.append("audioFile", audioFile);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/v1/addPodcast", data, {
+      const res = await axios.post("https://pod-caster-api-04.vercel.app/api/v1/podcast/addPodcast", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
