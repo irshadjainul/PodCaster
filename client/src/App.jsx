@@ -21,7 +21,7 @@ function App() {
   const dispatch=useDispatch()
   useEffect(() => {
     const fetch = async () => {
-      const res =await axios.get("https://pod-caster-api-04.vercel.app/api/v1/check-cookie", {
+      const res =await axios.get("https://pod-caster-api-04.vercel.app/api/v1/user/check-cookie", {
         withCredentials: true,
       });
       if(res.data.message){
