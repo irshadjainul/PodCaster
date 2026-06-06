@@ -1,5 +1,5 @@
 import express from 'express'
-export const app=express()
+const app=express()
 import dotenv from 'dotenv'
 import connectDb from './db/db.js'
 import cookieParser from 'cookie-parser'
@@ -32,3 +32,6 @@ app.use("/api/v1/podcast",podcastApi)
 app.get("/",(req,res)=>{
     res.send("hii from backend")
 })
+
+
+export default app
