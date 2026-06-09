@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
   origin: [
-      "http://podcaster-04.vercel.app",
       "https://podcaster-04.vercel.app",
     ],
   credentials: true
