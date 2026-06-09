@@ -13,7 +13,15 @@ connectDb()
 
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://podcaster-04.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use("/uploads",express.static("uploads"))
 
 
